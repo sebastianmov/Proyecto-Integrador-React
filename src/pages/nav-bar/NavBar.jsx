@@ -13,7 +13,7 @@ const NavBar = () => {
           <div className="navbarNav">
             <ul className="navbar-nav fs-6">
               <MenuOption pageToConnect={"/"}>INICIO</MenuOption>
-              <MenuOption pageToConnect={"/gallery"}>GALERIA</MenuOption>
+              <MenuOption pageToConnect={"/gallery-item"}>GALERIA</MenuOption>
               <MenuOption pageToConnect={"/aboutUs"}>NOSOTROS</MenuOption>
               <MenuOption pageToConnect={"/contact"}>CONTACTO</MenuOption>
               <MenuOption pageToConnect={"/account"}>CUENTA</MenuOption>

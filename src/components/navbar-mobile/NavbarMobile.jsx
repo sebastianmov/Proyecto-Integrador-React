@@ -16,7 +16,9 @@ const NavbarMobile = () => {
           <i className="bi bi-patch-question" />
           <p>Nosotros</p>
         </Link>
-        <Link className="px-2 d-flex flex-column align-items-center">
+        <Link
+        to="/gallery-item" 
+        className="px-2 d-flex flex-column align-items-center">
           <i className="bi bi-columns-gap" />
           <p>Galería</p>
         </Link>

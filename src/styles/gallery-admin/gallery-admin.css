@@ -1,4 +1,4 @@
-#contact-page{
+#gallery-admin-page{
     min-height: 93vh;
     background-image: url(../../assets/img/general/cuadro1Gaby.jpg);
     background-repeat: no-repeat;
@@ -7,7 +7,7 @@
     filter: grayscale(0.1);
 }
 
-#contact-form-container{
+#gallery-admin-form-container{
     width: 500px;
     height: 80vh;
     border: 3px solid black;
