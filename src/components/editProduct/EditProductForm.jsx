@@ -1,15 +1,20 @@
-import React, {useState} from 'react';
+import NameInput from '../general/inputs/NameInput'
+import FrameDimensionsInput from '../general/inputs/FrameDimensionsInput'
 import GeneralButton from '../general/buttons/GeneralButton';
 import TextInput from '../general/inputs/TextInput';
 import PriceInput from '../general/inputs/PriceInput';
 import {useForm} from "react-hook-form";
 
 
-const EditForm = () => {
+const EditProductForm = () => {
     const { handleSubmit, register } = useForm();
   
-  //  const putProduct 
-  
+//    const putProduct = (id, updatedData)=>{
+//    updateProduct(id, updatedData)
+// }
+ const onSubmit = (data) => {
+  console.log(data);
+ }
     return (
       <>
         <h1 className="mb-3">Editar Producto</h1>
@@ -17,7 +22,7 @@ const EditForm = () => {
           className="w-auto h-auto pb-5 pb-md-0"
           onSubmit={handleSubmit(onSubmit)}
         >
-          <NameInput
+          <NameInput 
           register={register}
           placeholderText={"Destellos del desierto"}
           isRequired={true}
@@ -78,5 +83,5 @@ const EditForm = () => {
     );
   };
   
-  export default EditForm;
+  export default EditProductForm;
   
