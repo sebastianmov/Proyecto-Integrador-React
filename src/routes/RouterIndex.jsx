@@ -8,6 +8,7 @@ import PageLogoMobile from "../components/navbarMobile/PageLogoMobile";
 import Gallery from "../pages/gallery/Gallery";
 import AddProduct from "../pages/addProduct/AddProduct";
 import GalleryAdmin from "../pages/galleryAdmin/GalleryAdmin";
+import LogIn from "../pages/logIn/LogIn";
 import { useSelector } from "react-redux";
 import { selectUser } from "../features/userFeature";
 
