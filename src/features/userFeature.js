@@ -9,12 +9,12 @@ export const userFeature = createSlice({
   },
   reducers: {
     setUser: (state, action) => {
-      state.value = action.payload
-      // {isAdmin: false} = {name: "Alan", isAdmin: true} 
+      state.value = action.payload;
     },
   },
 })
 
-// Action creators are generated for each case reducer function
-export const {setUser} = userFeature.actions;
-export default userFeature.reducer; 
+export const { setUser } = userFeature.actions;
+export const selectUser = (state) => state.user.value;
+
+export default userFeature.reducer;
