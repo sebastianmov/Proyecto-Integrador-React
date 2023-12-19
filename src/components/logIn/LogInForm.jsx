@@ -10,15 +10,9 @@ import PasswordInput from "../general/inputs/PasswordInput";
 const LoginForm = () => {
   const { handleSubmit, register } = useForm();
 
-  
-
-//   const onSubmit = (data) => {
-//     if (    ) {
-      
-//     } else {
-//        console.log("faltan datos");
-//     }
-//   };
+ const getUserData = (data) => {
+    
+  };
 
   return (
     <>
@@ -36,7 +30,7 @@ const LoginForm = () => {
     <h4 className="mb-1 text-center">ó</h4>
       <form
         className="w-auto h-auto pb-5 pb-md-0 d-flex flex-column"
-        onSubmit={handleSubmit()}
+        onSubmit={handleSubmit(getUserData)}
       >
         <EmailTextInput
           register={register}

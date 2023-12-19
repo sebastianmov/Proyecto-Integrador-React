@@ -1,18 +1,20 @@
-import { createSlice } from "@reduxjs/toolkit";
+
+//Este archivo contiene rebanadas "slice"
+import { createSlice } from '@reduxjs/toolkit'
 
 export const userFeature = createSlice({
-  name: "user",
+  name: 'user',
   initialState: {
-    value: { isAdmin: false },
+    value: {isAdmin: false}, 
   },
   reducers: {
-    addActiveUser: (state, action) => {
-      state.value = action.payload;
+    setUser: (state, action) => {
+      state.value = action.payload
+      // {isAdmin: false} = {name: "Alan", isAdmin: true} 
     },
   },
-});
+})
 
-export const { addActiveUser } = userFeature.actions;
-export const selectUser = (state) => state.user.value;
-
-export default userFeature.reducer;
+// Action creators are generated for each case reducer function
+export const {setUser} = userFeature.actions;
+export default userFeature.reducer; 
