@@ -8,6 +8,7 @@ import PasswordInput from "../general/inputs/PasswordInput";
 import logInFunction from "../../utils/logIn/logInFunction";
 import { useDispatch } from "react-redux";
 import { setUser } from "../../features/userFeature";
+import { useState } from "react";
 // import validator from "validator";
 
 // Solo falta que Alan corrija la API
@@ -15,12 +16,18 @@ import { setUser } from "../../features/userFeature";
 const LoginForm = () => {
   const { handleSubmit, register } = useForm();
   const dispatch = useDispatch();
-  
-  
+  const [errorMessage, setErrorMessage] = useState('d-none');
    const getUserData = async (data) => {
     console.log(data);
     const userData = await logInFunction(data);
-    dispatch(setUser(userData));
+      if( userData.email ){
+        console.log("inicio exitoso");
+        dispatch(setUser(userData));
+        setErrorMessage('d-none');
+      } else{
+        console.log("inicio fallido");
+        setErrorMessage('');
+      }
    };
 
   return (
@@ -58,6 +65,7 @@ const LoginForm = () => {
           nameText={"password"}
           register={register}
           />
+           <h3 className={errorMessage} >datos incorrectos</h3>
           <GeneralButton
           buttonText={"Ingresar"}
           buttonColorClass={"bg-primary text-white my-2 mt-5 btn-block"}
